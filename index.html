@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> || Loan Eligibility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form_container">
+        <h2>LOAN ELIGIBILITY FORM</h2>
+        <form id="creditForm">
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName" required title="Please enter your full name"><br>
+            <span id="fullNameError" class="error"></span><br>
+
+            <label for="accountAmount">Current Amount in Account:</label><br>
+            <input type="number" id="accountAmount" name="accountAmount" required
+                title="Please enter your current amount in account"><br>
+            <span id="accountAmountError" class="error"></span><br>
+
+            <label for="loan-amount">Loan Amount Requested:</label>
+            <input type="number" id="loan-amount" required>
+            <br>
+
+            <label for="creditHistory">6 Months Credit History:</label><br>
+            <select id="creditHistory" name="creditHistory">
+                <option value="">Select as applicable</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br>
+
+            <label for="lastDepositDate">Last Deposit Date:</label><br>
+            <input type="date" id="lastDepositDate" name="lastDepositDate" required
+                title="Please select the last deposit date"><br>
+            <span id="lastDepositDateError" class="error"></span><br>
+
+            <label for="lastLoanCollectionDate">Last Loan Collection Date:</label><br>
+            <input type="date" id="lastLoanCollectionDate" name="lastLoanCollectionDate" required
+                title="Please select the last loan collection date"><br>
+            <span id="lastLoanCollectionDateError" class="error"></span><br>
+
+            <label for="loanDate">Loan Application Date:</label><br>
+            <input type="date" id="loanDate" name="loanDate" required
+                title="Please select the loan application date"><br>
+            <span id="loanDateError" class="error"></span><br>
+
+            <label for="repaymentDate" id="repayment">Loan Repayment Date:</label><br>
+            <input type="date" id="repaymentDate" name="repaymentDate" required
+                title="Please select the loan repayment date"><br>
+            <span id="repaymentDateError" class="error"></span><br>
+
+            <label for="accountType">Account Operated Type:</label><br>
+            <select id="accountType" name="accountType">
+                <option value="">Select Account Type</option>
+                <option value="current">Current</option>
+                <option value="savings">Savings</option>
+            </select><br>
+            <span id="accountTypeError" class="error"></span><br>
+
+            <button type="button" onclick="checkLoanWorthiness()">CHECK LOAN ELIGIBILITY</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
